@@ -19,6 +19,13 @@ import {
 } from 'react-icons/fi';
 
 const sidebarItems = [
+
+    {
+    key: 'dashboard',
+    label: 'Dashboard',
+    icon: FiHome,
+    to: '/dashboard',
+  },
   {
     key: 'auth',
     label: 'Onboarding & KYC',
@@ -31,27 +38,16 @@ const sidebarItems = [
     ],
   },
   {
-    key: 'dashboard',
-    label: 'Dashboard',
-    icon: FiHome,
-    to: '/dashboard',
-    children: [
-      { key: 'dash-health',    label: 'Health Overview',        to: '/dashboard/health' },
-      { key: 'dash-balances',  label: 'Wallet Balances',        to: '/dashboard/balances' },
-      { key: 'dash-throughput',label: 'Transaction Throughput', to: '/dashboard/throughput' },
-      { key: 'dash-recon',     label: 'Reconciliation Tracker', to: '/dashboard/reconciliation' },
-      { key: 'dash-activity',  label: 'Activity Stream',        to: '/dashboard/activity' },
-    ],
-  },
-  {
     key: 'wallets',
-    label: 'Wallets',
+    label: 'My Wallet',
     icon: FiDatabase,
     to: '/wallets',
     children: [
-      { key: 'wallets-all',    label: 'All Wallets',     to: '/wallets' },
-      { key: 'wallets-create', label: 'Create Wallet',   to: '/wallets/create' },
-      { key: 'wallets-detail', label: 'Wallet Details',  to: '/wallets/:id' },
+      { key: 'wallets-all',    label: 'Overview',     to: '/wallets' },
+      { key: 'wallets-create', label: 'Balances',   to: '/wallets/create' },
+      { key: 'wallet-topup', label: 'Top-up',  to: '/wallets/:id' },
+      { key: 'wallets-transfer', label: 'Transafer',  to: '/wallets/:id' },
+      { key: 'wallets-history', label: 'History',  to: '/wallets/:id' },
     ],
   },
   {

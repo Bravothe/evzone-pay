@@ -72,15 +72,6 @@ export default function Header({ collapsed, onToggleSidebar }) {
         <span className={styles.logoText}>EVzone</span>
       </Link>
 
-      <div className={styles.search}>
-        <FiSearch className={styles.searchIcon} />
-        <input
-          type="text"
-          placeholder="Search…"
-          className={styles.searchInput}
-        />
-      </div>
-
       <nav className={styles.navLinks}>
         <NavLink to="/discuss" className={styles.navLink}>
           Discuss your needs

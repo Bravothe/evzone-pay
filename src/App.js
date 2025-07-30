@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import AppProviders from './providers/AppProviders';
 import PublicLayout from './layouts/PublicLayout';
 import ProtectedLayout from './layouts/ProtectedLayout';
+import Dashboard from './pages/Dashboard';
 
 import PaymentsPage from './features/payments/pages/PaymentsPage';
 
@@ -20,7 +21,7 @@ export default function App() {
 
           {/* Protected pages */}
           <Route element={<ProtectedLayout />}>
-            <Route path="/"         element={<div>Dashboard</div>} />
+            <Route path="/"         element={<Dashboard />} />
             <Route path="/payments" element={<PaymentsPage />} />
             {/* you can add more protected routes here */}
           </Route>

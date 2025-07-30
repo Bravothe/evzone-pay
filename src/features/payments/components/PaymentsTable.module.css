@@ -1,0 +1,22 @@
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.table th,
+.table td {
+  padding: var(--space-2);
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}
+.row:hover {
+  background: #f9f9f9;
+}
+td.pending {
+  color: orange;
+}
+td.completed {
+  color: green;
+}
+td.failed {
+  color: red;
+}

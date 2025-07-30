@@ -1,0 +1,200 @@
+// src/constants/sidebarItems.js
+
+import {
+  FiUserCheck,
+  FiUsers,
+  FiHome,
+  FiCreditCard,
+  FiDownload,
+  FiSend,
+  FiLayers,
+  FiRepeat,
+  FiActivity,
+  FiFileText,
+  FiShield,
+  FiBell,
+  FiSettings,
+  FiClipboard,
+  FiDatabase,
+} from 'react-icons/fi';
+
+const sidebarItems = [
+  {
+    key: 'auth',
+    label: 'Onboarding & KYC',
+    icon: FiUserCheck,
+    to: '/auth',
+    children: [
+      { key: 'auth-individual', label: 'Individual KYC', to: '/auth/individual' },
+      { key: 'auth-business',   label: 'Business KYC',   to: '/auth/business' },
+      { key: 'auth-enterprise',  label: 'Enterprise KYC', to: '/auth/enterprise' },
+    ],
+  },
+  {
+    key: 'dashboard',
+    label: 'Dashboard',
+    icon: FiHome,
+    to: '/dashboard',
+    children: [
+      { key: 'dash-health',    label: 'Health Overview',        to: '/dashboard/health' },
+      { key: 'dash-balances',  label: 'Wallet Balances',        to: '/dashboard/balances' },
+      { key: 'dash-throughput',label: 'Transaction Throughput', to: '/dashboard/throughput' },
+      { key: 'dash-recon',     label: 'Reconciliation Tracker', to: '/dashboard/reconciliation' },
+      { key: 'dash-activity',  label: 'Activity Stream',        to: '/dashboard/activity' },
+    ],
+  },
+  {
+    key: 'wallets',
+    label: 'Wallets',
+    icon: FiDatabase,
+    to: '/wallets',
+    children: [
+      { key: 'wallets-all',    label: 'All Wallets',     to: '/wallets' },
+      { key: 'wallets-create', label: 'Create Wallet',   to: '/wallets/create' },
+      { key: 'wallets-detail', label: 'Wallet Details',  to: '/wallets/:id' },
+    ],
+  },
+  {
+    key: 'payments',
+    label: 'Payments',
+    icon: FiCreditCard,
+    to: '/payments',
+    children: [
+      { key: 'payments-all',      label: 'All Payments', to: '/payments' },
+      { key: 'payments-deposits', label: 'Deposits',     to: '/payments/deposits' },
+      { key: 'payments-funding',  label: 'Funding',      to: '/payments/funding' },
+    ],
+  },
+  {
+    key: 'payouts',
+    label: 'Payouts',
+    icon: FiSend,
+    to: '/payouts',
+    children: [
+      { key: 'payouts-batch',     label: 'Batch Runs',     to: '/payouts/batch' },
+      { key: 'payouts-scheduler', label: 'Scheduler',      to: '/payouts/scheduler' },
+      { key: 'payouts-exceptions',label: 'Exceptions',     to: '/payouts/exceptions' },
+    ],
+  },
+  {
+    key: 'settlements',
+    label: 'Settlements',
+    icon: FiDownload,
+    to: '/settlements',
+    children: [
+      { key: 'settlements-batches', label: 'Batch Viewer', to: '/settlements/batches' },
+      { key: 'settlements-netting', label: 'Netting',      to: '/settlements/netting' },
+    ],
+  },
+  {
+    key: 'subAccounts',
+    label: 'Sub‑Accounts',
+    icon: FiLayers,
+    to: '/sub-accounts',
+    children: [
+      { key: 'sub-accounts-all',     label: 'All Sub‑Accounts', to: '/sub-accounts' },
+      { key: 'sub-accounts-budgets', label: 'Budgets & Rules',  to: '/sub-accounts/budgets' },
+      { key: 'sub-accounts-recurring', label: 'Recurring Top‑Ups', to: '/sub-accounts/recurring' },
+    ],
+  },
+  {
+    key: 'transactions',
+    label: 'Transactions',
+    icon: FiActivity,
+    to: '/transactions',
+    children: [
+      { key: 'tx-all',     label: 'All Transactions', to: '/transactions' },
+      { key: 'tx-filters', label: 'Filters & Search', to: '/transactions/filters' },
+      { key: 'tx-export',  label: 'Export',           to: '/transactions/export' },
+    ],
+  },
+  {
+    key: 'reconciliation',
+    label: 'Reconciliation',
+    icon: FiRepeat,
+    to: '/reconciliation',
+    children: [
+      { key: 'recon-kanban',     label: 'Kanban Board',    to: '/reconciliation/kanban' },
+      { key: 'recon-suggestions',label: 'ML Suggestions',  to: '/reconciliation/suggestions' },
+      { key: 'recon-history',    label: 'Exception History', to: '/reconciliation/history' },
+    ],
+  },
+  {
+    key: 'invoices',
+    label: 'Invoices',
+    icon: FiFileText,
+    to: '/invoices',
+    children: [
+      { key: 'inv-create',   label: 'Create Invoice', to: '/invoices/create' },
+      { key: 'inv-editor',   label: 'Line‑Item Editor', to: '/invoices/editor' },
+      { key: 'inv-dispatch', label: 'Dispatch & Preview', to: '/invoices/dispatch' },
+    ],
+  },
+  {
+    key: 'users',
+    label: 'Users',
+    icon: FiUsers,
+    to: '/users',
+    children: [
+      { key: 'users-all',      label: 'All Users',     to: '/users' },
+      { key: 'users-invite',   label: 'Invite & Roles',to: '/users/invite' },
+      { key: 'users-impersonate', label: 'Impersonation', to: '/users/impersonation' },
+    ],
+  },
+  {
+    key: 'access',
+    label: 'Access',
+    icon: FiShield,
+    to: '/access',
+    children: [
+      { key: 'access-matrix',    label: 'Permission Matrix', to: '/access/matrix' },
+      { key: 'access-flags',     label: 'Feature Flags',     to: '/access/flags' },
+    ],
+  },
+  {
+    key: 'notifications',
+    label: 'Notifications',
+    icon: FiBell,
+    to: '/notifications',
+    children: [
+      { key: 'notif-templates', label: 'Templates', to: '/notifications/templates' },
+      { key: 'notif-channels',  label: 'Channels',    to: '/notifications/channels' },
+      { key: 'notif-sla',       label: 'SLA Heatbars',to: '/notifications/sla' },
+    ],
+  },
+  {
+    key: 'integrations',
+    label: 'Integrations',
+    icon: FiSettings,
+    to: '/integrations',
+    children: [
+      { key: 'int-keys',       label: 'API Keys',    to: '/integrations/keys' },
+      { key: 'int-webhooks',   label: 'Webhooks',    to: '/integrations/webhooks' },
+      { key: 'int-playground', label: 'Event Playground', to: '/integrations/playground' },
+    ],
+  },
+  {
+    key: 'settings',
+    label: 'Settings',
+    icon: FiSettings,
+    to: '/settings',
+    children: [
+      { key: 'settings-org',      label: 'Organization Info',     to: '/settings/org' },
+      { key: 'settings-residency',label: 'Data Residency',        to: '/settings/residency' },
+      { key: 'settings-timezone', label: 'Time & Formats',        to: '/settings/timezone' },
+      { key: 'settings-security', label: 'MFA & SSO',             to: '/settings/security' },
+    ],
+  },
+  {
+    key: 'auditLog',
+    label: 'Audit Trails',
+    icon: FiClipboard,
+    to: '/audit-log',
+    children: [
+      { key: 'audit-search', label: 'Search Logs', to: '/audit-log/search' },
+      { key: 'audit-diff',   label: 'Diff Viewer', to: '/audit-log/diff' },
+    ],
+  },
+];
+
+export default sidebarItems;

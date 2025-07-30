@@ -1,0 +1,21 @@
+:root {
+  /* Colors */
+  --color-primary:        #FF6D00;
+  --color-primary-hover:  #FF8A42;
+  --color-on-primary:     #FFF;
+
+  /* Spacing (4‑point) */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 16px;
+  --space-4: 24px;
+
+  /* Typography */
+  --font-size-body:    14px;
+  --font-size-heading: 24px;
+
+  /* Breakpoints */
+  --bp-mobile:  640px;
+  --bp-tablet:  768px;
+  --bp-desktop: 1024px;
+}

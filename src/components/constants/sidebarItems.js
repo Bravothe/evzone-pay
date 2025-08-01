@@ -24,7 +24,7 @@ const sidebarItems = [
     key: 'dashboard',
     label: 'Dashboard',
     icon: FiHome,
-    to: '/dashboard',
+    to: '/',
   },
   {
     key: 'auth',
@@ -37,19 +37,19 @@ const sidebarItems = [
       { key: 'auth-enterprise',  label: 'Enterprise KYC', to: '/auth/enterprise' },
     ],
   },
-  {
-    key: 'wallets',
-    label: 'My Wallet',
-    icon: FiDatabase,
-    to: '/wallets',
-    children: [
-      { key: 'wallets-all',    label: 'Overview',     to: '/wallets' },
-      { key: 'wallets-create', label: 'Balances',   to: '/wallets/create' },
-      { key: 'wallet-topup', label: 'Top-up',  to: '/wallets/:id' },
-      { key: 'wallets-transfer', label: 'Transafer',  to: '/wallets/:id' },
-      { key: 'wallets-history', label: 'History',  to: '/wallets/:id' },
-    ],
-  },
+ {
+  key: 'wallets',
+  label: 'My Wallet',
+  icon: FiDatabase,
+  to: '/wallets',
+  children: [
+  { key: 'wallets-overview',    label: 'Overview',      to: '/wallets/wallet-overview' },
+  { key: 'wallets-balances',    label: 'Balances',      to: '/wallets/activity-balances' },
+  { key: 'wallet-managefunds',  label: 'Manage Funds',  to: '/wallets/manage-funds' },
+],
+
+},
+
   {
     key: 'payments',
     label: 'Payments',

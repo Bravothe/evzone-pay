@@ -24,6 +24,12 @@ import AccountControls   from './features/accounts/pages/AccountControls';
 import AccountSettings   from './features/accounts/pages/AccountSettings';
 import AccountHistory    from './features/accounts/pages/AccountHistory';
 
+
+// ← NEW User Management pages
+import SystemUsers      from './features/users/pages/SystemUsers';
+import Invitations      from './features/users/pages/Invitations';
+import UserSessions     from './features/users/pages/UserSessions';
+
 export default function App() {
   return (
     <AppProviders>
@@ -56,6 +62,14 @@ export default function App() {
               <Route path="controls"  element={<AccountControls />} />
               <Route path="settings" element={<AccountSettings />} />
               <Route path="history"   element={<AccountHistory />} />
+            </Route>
+
+
+               {/* ← NEW User Management */}
+            <Route path="users">
+              <Route index                 element={<SystemUsers />} />
+              <Route path="invite"         element={<Invitations />} />
+              <Route path="impersonation"  element={<UserSessions />} />
             </Route>
 
             {/* Fallback */}

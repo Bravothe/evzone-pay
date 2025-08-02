@@ -127,15 +127,15 @@ const sidebarItems = [
       { key: 'inv-dispatch', label: 'Dispatch & Preview', to: '/invoices/dispatch' },
     ],
   },
-  {
+ {
     key: 'users',
     label: 'User Management',
     icon: FiUsers,
     to: '/users',
     children: [
-      { key: 'users-all',      label: 'System Users',     to: '/users' },
-      { key: 'users-invite',   label: 'Invitations',to: '/users/invite' },
-      { key: 'users-impersonate', label: 'User Sessions', to: '/users/impersonation' },
+      { key: 'users-all',        label: 'System Users', to: '/users'                },
+      { key: 'users-invite',     label: 'Invitations',   to: '/users/invite'        },
+      { key: 'users-impersonate',label: 'User Sessions', to: '/users/impersonation' },
     ],
   },
   {

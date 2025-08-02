@@ -82,15 +82,16 @@ const sidebarItems = [
       { key: 'settlements-netting', label: 'Netting',      to: '/settlements/netting' },
     ],
   },
-  {
-    key: 'subAccounts',
-    label: 'Sub‑Accounts',
+{
+    key: 'accounts',
+    label: 'Accounts',
     icon: FiLayers,
-    to: '/sub-accounts',
+    to: '/accounts',
     children: [
-      { key: 'sub-accounts-all',     label: 'All Sub‑Accounts', to: '/sub-accounts' },
-      { key: 'sub-accounts-budgets', label: 'Budgets & Rules',  to: '/sub-accounts/budgets' },
-      { key: 'sub-accounts-recurring', label: 'Recurring Top‑Ups', to: '/sub-accounts/recurring' },
+      { key: 'accounts-tree',      label: 'Accounts Tree',     to: '/accounts/tree' },
+      { key: 'accounts-controls',  label: 'Account Controls',  to: '/accounts/controls' },
+      { key: 'accounts-settings', label: 'Settings',         to: '/accounts/settings' },
+      { key: 'accounts-history',   label: 'History',           to: '/accounts/history' },
     ],
   },
   {

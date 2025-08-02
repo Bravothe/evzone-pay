@@ -1,6 +1,10 @@
-// src/App.js
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from 'react-router-dom';
 
 import AppProviders from './providers/AppProviders';
 import PublicLayout from './layouts/PublicLayout';
@@ -9,33 +13,53 @@ import Dashboard from './pages/Dashboard';
 
 import PaymentsPage from './features/payments/pages/PaymentsPage';
 
-// My Wallet feature pages
+// My Wallet pages
 import WalletOverview   from './features/my-wallet/pages/WalletOverview';
 import ManageFunds      from './features/my-wallet/pages/ManageFunds';
 import ActivityBalances from './features/my-wallet/pages/ActivityBalances';
+
+// Accounts pages (create these)
+import AccountsTree      from './features/accounts/pages/AccountsTree';
+import AccountControls   from './features/accounts/pages/AccountControls';
+import AccountSettings   from './features/accounts/pages/AccountSettings';
+import AccountHistory    from './features/accounts/pages/AccountHistory';
 
 export default function App() {
   return (
     <AppProviders>
       <Router>
         <Routes>
-          {/* Public pages */}
+          {/* Public */}
           <Route element={<PublicLayout />}>
             <Route path="/login"    element={<div>Login Page</div>} />
             <Route path="/register" element={<div>Register Page</div>} />
           </Route>
 
-          {/* Protected pages */}
+          {/* Protected */}
           <Route element={<ProtectedLayout />}>
-            <Route path="/"                  element={<Dashboard />} />
-            <Route path="/payments"          element={<PaymentsPage />} />
+            {/* Dashboard */}
+            <Route index element={<Dashboard />} />
 
-            {/* My Wallet feature */}
-            <Route path="/wallets/wallet-overview"                   element={<WalletOverview />} />
-            <Route path="/wallets/manage-funds"      element={<ManageFunds />} />
-            <Route path="/wallets/activity-balances" element={<ActivityBalances />} />
+            <Route path="payments" element={<PaymentsPage />} />
 
-            {/* you can add more protected routes here */}
+            {/* My Wallet */}
+            <Route path="wallets">
+              <Route path="overview"        element={<WalletOverview />} />
+              <Route path="manage-funds"    element={<ManageFunds />} />
+              <Route path="activity-balances" element={<ActivityBalances />} />
+            </Route>
+
+            {/* Accounts */}
+            <Route path="accounts">
+              <Route index element={<Navigate to="tree" replace />} />
+              <Route path="tree"      element={<AccountsTree />} />
+              <Route path="controls"  element={<AccountControls />} />
+              <Route path="settings" element={<AccountSettings />} />
+              <Route path="history"   element={<AccountHistory />} />
+            </Route>
+
+            {/* Fallback */}
+            <Route path="*" element={<Navigate to="/" replace />} />
           </Route>
         </Routes>
       </Router>

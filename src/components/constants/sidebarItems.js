@@ -129,23 +129,23 @@ const sidebarItems = [
   },
   {
     key: 'users',
-    label: 'Users',
+    label: 'User Management',
     icon: FiUsers,
     to: '/users',
     children: [
-      { key: 'users-all',      label: 'All Users',     to: '/users' },
-      { key: 'users-invite',   label: 'Invite & Roles',to: '/users/invite' },
-      { key: 'users-impersonate', label: 'Impersonation', to: '/users/impersonation' },
+      { key: 'users-all',      label: 'System Users',     to: '/users' },
+      { key: 'users-invite',   label: 'Invitations',to: '/users/invite' },
+      { key: 'users-impersonate', label: 'User Sessions', to: '/users/impersonation' },
     ],
   },
   {
-    key: 'access',
-    label: 'Access',
+    key: 'permissions',
+    label: 'Permissions',
     icon: FiShield,
-    to: '/access',
+    to: '/permissions',
     children: [
-      { key: 'access-matrix',    label: 'Permission Matrix', to: '/access/matrix' },
-      { key: 'access-flags',     label: 'Feature Flags',     to: '/access/flags' },
+      { key: 'permissions-matrix',    label: 'Permission Matrix', to: '/permissions/matrix' },
+      { key: 'permissions-flags',     label: 'Feature Flags',     to: '/permissions/flags' },
     ],
   },
   {
